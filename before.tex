@@ -1,0 +1,73 @@
+\documentclass[a4paper,11pt]{ctexart}
+\usepackage{latexsym, fullpage, titlesec, marvosym, enumitem, hyperref, fancyhdr, tabularx, fontawesome}
+\usepackage[usenames,dvipsnames]{color}
+\pagestyle{fancy}
+\fancyhf{} 
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+\urlstyle{same}
+\raggedbottom\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{\scshape\large\raggedright}{}{0em}{}[\titlerule]
+
+% 自定义环境和命令
+\newenvironment{resumeList}{\begin{itemize}[leftmargin=*,label={}]}{\end{itemize}}
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeEntry}[4]{
+  \item \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    #3 & #4 \\
+  \end{tabular*}
+}
+
+\begin{document}
+% 个人信息
+\begin{center}
+    {\Huge\bfseries 吕昭庭} \\ \vspace{3pt}
+    \small
+    \faMobile \hspace{.5pt} +86 138-0343-9355 $|$ \faAt \hspace{.5pt} \href{mailto:lvzting0717@163.com}{lzting0717@163.com} $|$ \faMapMarker \hspace{.5pt} 山西太原 $|$ \faGithub \hspace{.5pt} 
+\end{center}
+
+% 教育背景
+\section{教育背景}
+\begin{resumeList}
+    \resumeEntry{齐鲁工业大学 (山东省科学院)}{中国，山东}{计算机科学与技术，学士}{2021.09 -- 2024.06}
+    \begin{resumeList}
+        \resumeItem{主要课程: 数据结构（88）、计算机组成原理（89）、高等数学（93）、线性代数（97）、概率论与数理统计（91）、数值分析（93）}
+        \resumeItem{CET6 (英语六级, 516) | 全国大学生数学竞赛（山东赛区二等奖） | 院级二等奖学金 | C1驾照}
+    \end{resumeList}
+\end{resumeList}
+
+% 项目经历
+\section{项目经历}
+\begin{resumeList}
+    \resumeEntry{基于Spring Boot的订餐管理系统}{}{Spring Boot (Java后端), MyBatis-Plus, Spring Security}{}
+    \begin{resumeList}
+        \resumeItem{采用Spring Boot构建系统，遵循MVC设计，提高开发效率和可维护性。}
+        \resumeItem{集成 Spring Security 和 Kerberos 实现企业级 SSO 认证，解决了传统电商平台用户信息（尤其是密码）明文存储的问题，显著提升了系统安全性和用户体验。}
+    \end{resumeList}
+    \resumeEntry{基于Django框架的旅游推荐系统}{}{Scrapy, Django, PyCharts}{}
+    \begin{resumeList}
+        \resumeItem{使用Scrapy + Asyncio + Aiohttp 并发爬虫，数据采集速度提升40%。}
+        \resumeItem{Django + PyCharts 数据可视化，增强交互体验。}
+    \end{resumeList}
+    \resumeEntry{建筑可持续性评估研究}{HELIYON (IF: 3.4)}{第三作者}{2024}
+    \begin{resumeList}
+        \resumeItem{利用PCA对47个指标聚类，验证7个二级指标分类合理性。}
+        \resumeItem{识别关键指标并优化指标体系，减少17\%的冗余数据。}
+    \end{resumeList}
+\end{resumeList}
+
+% 专业素养
+\section{专业素养}
+\begin{resumeList}
+    \resumeItem{熟悉Linux操作，熟练使用Git/GitHub，具备多人协作开发经验。}
+    \resumeItem{掌握JWT、Kerberos等用户鉴权机制，理解DES等典型对称、非对称加密算法。}
+    \resumeItem{熟练掌握 Scrapy、BeautifulSoup、Selenium，能根据需求选择合适的爬取方式。熟悉 User-Agent 伪装、IP 代理池、验证码识别（如 Tesseract OCR）、请求频率控制等反爬机制。}
+\end{resumeList}
+
+\end{document}
