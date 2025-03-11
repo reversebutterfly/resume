@@ -1,81 +1,133 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage{latexsym, fullpage, titlesec, marvosym, enumitem, hyperref, fancyhdr, tabularx, fontawesome}
 \usepackage[usenames,dvipsnames]{color}
+
+% 页面布局
 \pagestyle{fancy}
-\fancyhf{} 
+\fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-0.5in}
 \addtolength{\textheight}{1.0in}
+
+% 链接样式
 \urlstyle{same}
-\raggedbottom\raggedright
+\raggedbottom
+\raggedright
 \setlength{\tabcolsep}{0in}
+
+% 章节格式
 \titleformat{\section}{\scshape\large\raggedright}{}{0em}{}[\titlerule]
 
-% Custom environment and commands
+% 自定义列表环境
 \newenvironment{resumeList}{\begin{itemize}[leftmargin=*,label={}]}{\end{itemize}}
 \newcommand{\resumeItem}[1]{\item\small{#1}}
+
 \newcommand{\resumeEntry}[4]{
-  \item \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+  \item \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
     #3 & #4 \\
   \end{tabular*}
 }
 
 \begin{document}
-% Personal Information
+
+% 个人信息
 \begin{center}
-    {\Huge\bfseries L\text{v} Zhaoting} \\ \vspace{3pt}
+    {\Huge\bfseries Zhaoting Lv} \\ \vspace{3pt}
     \small
-    \faMobile \hspace{.5pt} +86 138-0343-9355 $|$ \faAt \hspace{.5pt} \href{mailto:lvzting0717@163.com}{lzting0717@163.com} $|$ \faMapMarker \hspace{.5pt} Taiyuan, Shanxi, China 
+    \faMobile \hspace{.5pt} +86 138-0343-9355 $|$ 
+    \faAt \hspace{.5pt} \href{mailto:lvzting0717@163.com}{lzting0717@163.com} $|$ 
+    \faMapMarker \hspace{.5pt} MeiLinWan, Wanbailin District, Taiyuan, Shanxi, China 
 \end{center}
 
-% Education
-\section{Education}
+% 教育背景
+\section{EDUCATION}
 \begin{resumeList}
-    \resumeEntry{Qilu University of Technology (Shandong Academy of Sciences)}{Shandong, China}{Bachelor of Computer Science and Technology}{Sep 2021 -- Jun 2024}
-    \begin{resumeList}
-        \resumeItem{Key Courses: Data Structures (88), Computer Organization (89), Linux Programming Basics (88), Advanced Mathematics (85), Linear Algebra (97), Probability and Mathematical Statistics (91), Discrete Mathematics (85), Numerical Analysis (93), Machine Learning and Pattern Recognition (85)}
-        \resumeItem{CET6 (516) | National College Mathematics Competition (Shandong Division, Second Prize) | College Second-Class Scholarship | C1 Driver's License}
-    \end{resumeList}
+    \resumeEntry{QILU UNIVERSITY OF TECHNOLOGY}
+    {Shandong, China}
+    {Bachelor of Science in Computer Science and Technology}
+    {Sep 2021 -- Jun 2024}
+    
+    \resumeItem{GPA: 3.4/5.0 \qquad CET6: 516} 
+    \resumeItem{Key Courses: Data Structures (88/100), Computer Organization (89/100), Advanced Math (93/100), Linear Algebra (97/100), Probability (91/100), Numerical Analysis (93/100)}
 \end{resumeList}
 
-% Projects
-\section{Projects}
+% 项目经历
+\section{PROJECTS}
 \begin{resumeList}
-    \resumeEntry{Meal Ordering Management System Based on Spring Boot}{}{Spring Boot (Java Backend), MyBatis-Plus, Spring Security}{}
-    \begin{resumeList}
-        \resumeItem{Built the system using Spring Boot, following the MVC design pattern to improve development efficiency and maintainability.}
-        \resumeItem{Integrated Spring Security + Kerberos for enterprise-level SSO authentication, enhancing system security.}
-    \end{resumeList}
-    \resumeEntry{8-bit ALU Design}{}{Quartus II, HDL, TD-CMA Experimental Box}{}
-    \begin{resumeList}
-        \resumeItem{Optimized the adder with a fast carry chain, achieving efficient addition/subtraction and logical operations.}
-        \resumeItem{Designed circuit diagrams using Quartus II, wrote HDL code, and tested it on the TD-CMA experimental box.}
-    \end{resumeList}
-    \resumeEntry{Tourism Recommendation System Based on Django}{}{Scrapy, Django, PyCharts}{}
-    \begin{resumeList}
-        \resumeItem{Implemented high-performance web scraping using Scrapy + Asyncio + Aiohttp concurrent crawler.}
-        \resumeItem{Developed a Django web application with PyCharts for interactive data visualization.}
-    \end{resumeList}
-    \resumeEntry{Research on Building Sustainability Assessment}{HELIYON (IF: 3.4)}{Third Author}{2024}
-    \begin{resumeList}
-        \resumeItem{Applied PCA to cluster 47 indicators, validating the rationality of 7 secondary indicator classifications.}
-        \resumeItem{Identified key indicators and optimized the indicator system, reducing redundant data by 17\%.}
-    \end{resumeList}
+    \resumeEntry{Online Food Ordering Management System}
+    {}
+    {Spring Boot (Java Backend), MyBatis-Plus, Spring Security}
+    {}
+
+    \resumeItem{Built system using Spring Boot with MVC, enhancing maintainability.}
+    \resumeItem{Integrated Spring Security and Kerberos for enterprise-level SSO authentication, addressing security risks in plaintext password storage.}
+
+    \resumeEntry{Tourism Recommendation System}
+    {}
+    {Scrapy, Django, PyCharts}
+    {}
+
+    \resumeItem{Used Scrapy + Asyncio + Aiohttp for concurrent scraping, improving speed by 40\%.}
+    \resumeItem{Implemented Django + PyCharts for data visualization and enhanced user interaction.}
+
+    \resumeEntry{Building Sustainability Assessment Research}
+    {HELIYON (IF: 3.4)}
+    {Third Author, DOI: 10.1016/j.heliyon.2024.e32151}
+    {Jun 2024}
+
+    \resumeItem{Applied PCA to cluster 47 indicators, validating 7 secondary classifications.}
+    \resumeItem{Optimized system, reducing redundant data by 17\%.}
 \end{resumeList}
 
-% Professional Skills
-\section{Professional Skills}
+% 工作经验
+\section{WORK EXPERIENCE}
 \begin{resumeList}
-    \resumeItem{Proficient in Git/GitHub and experienced in collaborative development.}
-    \resumeItem{Familiar with Linux operations and capable of writing Shell scripts.}
-    \resumeItem{Skilled in Java, familiar with JUC concurrent programming, lock mechanisms, and thread pool principles.}
-    \resumeItem{Experienced with Spring, SpringMVC, SpringBoot, and MyBatis, with knowledge of Spring Cloud integration and Spring Boot execution processes.}
-    \resumeItem{Knowledgeable in authentication mechanisms such as JWT and Kerberos, and fundamental concepts of symmetric/asymmetric encryption algorithms like DES.}
-    \resumeItem{Experienced in MySQL, proficient in index optimization, transaction management, and database partitioning strategies.}
+    \resumeEntry{Dareway Software CO., LTD.}
+    {Shandong, China}
+    {Java Development Intern}
+    {Jun 2023 -- Aug 2023}
+
+    \resumeItem{Developed core modules for "Smart Government Affairs Platform," focusing on user permission management.}
+    \resumeItem{Used Spring Boot, MyBatis, Vue.js for microservices, resolving 25+ bugs with a 95\% code merge pass rate.}
+    \resumeItem{Optimized government data processing module, improving efficiency by 30\%.}
+    \resumeItem{Implemented an ECharts dashboard for data visualization, successfully integrated into the system.}
+\end{resumeList}
+
+% 奖项与荣誉
+\section{AWARDS \& HONORS}
+\begin{resumeList}
+    \resumeEntry{China Undergraduate Mathematical Contest}
+    {Shandong Division}
+    {Second Prize}
+    {Oct 2024}
+
+    \resumeItem{Competed against 5,000+ students in Shandong Province.}
+    \resumeItem{Practiced 20+ hours weekly for 3 months, focusing on advanced calculus and linear algebra.}
+    \resumeItem{Developed a new integral solving method, increasing efficiency by 30\%.}
+    \pagebreak
+    \resumeEntry{Second-Class Scholarship}
+    {Qilu University of Technology}
+    {}
+    {2021-2022}
+
+    \resumeItem{Awarded to the top 15\% of students based on academics and extracurriculars.}
+    \resumeItem{Led programming team, managed version control, and developed core functionalities for team projects.}
+    \resumeEntry{C1 Driver's License}
+{China}
+{}
+{2023}
+\end{resumeList}
+
+% 技能
+\section{TECHNICAL SKILLS}
+\begin{resumeList}
+    \resumeItem{Proficient in Linux, Git/GitHub, and collaborative development.}
+    \resumeItem{Experienced in JWT, Kerberos, and encryption algorithms like DES.}
+    \resumeItem{Expert in web scraping (Scrapy, BeautifulSoup, Selenium), with anti-scraping techniques such as User-Agent spoofing, IP proxy pools, CAPTCHA recognition (Tesseract OCR), and request frequency control.}
 \end{resumeList}
 
 \end{document}
