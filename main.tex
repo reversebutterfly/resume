@@ -1,122 +1,122 @@
 \documentclass[a4paper,11pt]{ctexart}
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
+\usepackage{latexsym, fullpage, titlesec, marvosym, enumitem, hyperref, fancyhdr, tabularx, fontawesome}
 \usepackage[usenames,dvipsnames]{color}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
 \usepackage{tabularx}
-\usepackage{fontawesome}
+\usepackage{multirow}
+\usepackage{array}
 \pagestyle{fancy}
-\fancyhf{}
-\fancyfoot{}
+\fancyhf{} 
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 \addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-0.5in}
 \addtolength{\textheight}{1.0in}
 \urlstyle{same}
-\raggedbottom
-\raggedright
+\raggedbottom\raggedright
 \setlength{\tabcolsep}{0in}
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% 定义缺失的命令
-\newenvironment{resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,label={}]}{\end{itemize}}
-\newenvironment{resumeItemListStart}{\begin{itemize}[leftmargin=*,label={}]}{\end{itemize}}
-
-\newcommand{\resumeItem}[1]{
-  \item\small{#1}
-}
-
-\newcommand{\resumeEducationHeading}[4]{
-  \item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+\titleformat{\section}{\scshape\large\raggedright}{}{0em}{}[\titlerule]
+% 自定义环境和命令
+\newenvironment{resumeList}{\begin{itemize}[leftmargin=*,label={}]}{\end{itemize}}
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeEntry}[4]{
+  \item \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
     #3 & #4 \\
   \end{tabular*}
 }
-
-\newcommand{\resumeSubheading}[4]{
-  \item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    #3 & #4 \\
-  \end{tabular*}
-}
-
 \begin{document}
-%---------- 个人信息 ----------
+% 个人信息
 \begin{center}
-    {\Huge \textbf{吕昭庭}} \\ \vspace{3pt}
+    {\Huge\bfseries 吕昭庭} \\ \vspace{3pt}
     \small
-    \faMobile \hspace{.5pt} 13803439355
-    $|$
-    \faAt \hspace{.5pt} \href{mailto:lzting0717@163.com}{lvzting0717@163.com}
-    $|$
-    \faMapMarker \hspace{.5pt} 山西太原
+    \faMobile \hspace{.5pt} +86 138-0343-9355 $|$ \faAt \hspace{.5pt} \href{mailto:lzting0717@163.com}{lzting0717@163.com} $|$ \faMapMarker \hspace{.5pt} 山西太原}
 \end{center}
-%---------- 教育背景 ----------
-\section{教育背景}
-\begin{resumeSubHeadingListStart}
-    \resumeEducationHeading
-      {齐鲁工业大学}{中国，山东}
-      {计算机科学与技术，学士学位 }{2021.09 -- 2024.06}
-      \begin{resumeItemListStart}
-        \resumeItem{主修课程: 数据结构（88）、计算机组成原理（89）、数字图像处理（84）、Linux编程基础（88）、高等数学（85）、线性代数（97）、概率论与数理统计（91）、离散数学（85）、数值分析（93）、机器学习与模式识别（85）}
-      \end{resumeItemListStart}
-\end{resumeSubHeadingListStart}
-%---------- 考研信息 ----------
-\section{考研成绩}
-\begin{resumeSubHeadingListStart}
-    \resumeSubheading
-      {华南理工大学}{计算机科学与技术（081200）}
-      {政治: 69, 英语一: 60, 数学一: 84, 计算机学科专业基础: 99, 总分: 312}{}
-\end{resumeSubHeadingListStart}
-%---------- 项目经历 ----------
-\section{项目经历}
-\begin{resumeSubHeadingListStart}
-    \resumeSubheading
-      {订餐管理系统}{}
-      {Spring Boot, MyBatis-Plus, Spring Security with Kerberos Module}{}
-      \begin{resumeItemListStart}
-        \resumeItem{采用Spring Boot构建系统，遵循MVC设计思想，提高开发效率和系统的可维护性。}
-        \resumeItem{Spring Security 作为安全框架，同时利用 Kerberos 进行身份认证，实现企业级无缝SSO}
-      \end{resumeItemListStart}
-    \resumeSubheading
-      {基于快速进位链的8位ALU}{}
-      {Quartus II, HDL, TD-CMA实验箱}{}
-      \begin{resumeItemListStart}
-        \resumeItem{采用快速进位链技术优化加法器的进位传播问题，实现加法、减法、逻辑运算等功能。}
-        \resumeItem{使用Quartus II绘制电路图，编写HDL代码，并在TD-CMA实验箱上进行测试和性能验证。}
-      \end{resumeItemListStart}
-    \resumeSubheading
-      {旅游推荐系统}{}
-      {Scrapy, Django,  PyCharts}{}
-      \begin{resumeItemListStart}
-        \resumeItem{使用Scrapy框架构建多线程爬虫，结合Asyncio和Aiohttp提高爬取效率。}
-        \resumeItem{搭建基于Django的Web应用，并利用PyCharts进行数据可视化，实时展示旅游景点热力图。}
-      \end{resumeItemListStart}
-\end{resumeSubHeadingListStart}
 
-%---------- 证书 & 荣誉 ----------
-\section{技能 \& 荣誉}
-\begin{resumeSubHeadingListStart}
-    \begin{resumeItemListStart}
-      \resumeItem{CET6 (516)}
-      \resumeItem{熟练使用chatgpt、claude等AI工具}
-      \resumeItem{利用git、github等版本控制工具进行多人项目开发的经历}
-      \resumeItem{掌握latex等标签语言的基本语法，有使用latex进行简历制作的经历}
-      \resumeItem{第十六届全国大学生数学竞赛山东赛区省级二等奖}
-      \resumeItem{院级二等奖学金}
-      \resumeItem{C1驾照}
-      \resumeItem{齐鲁工业大学篮球"新生杯"季军}
-    \end{resumeItemListStart}
-\end{resumeSubHeadingListStart}
+% 教育背景
+\section{教育背景}
+\begin{resumeList}
+    \resumeEntry{齐鲁工业大学（山东省科学院）}{济南, 山东}{计算机科学与技术，学士}{2021.09 -- 2025.06}
+    \begin{resumeList}
+        \resumeItem{GPA：3.4/5.0 \qquad CET6：516/710}
+        \resumeItem{主要课程：数据结构（88/100）、计算机组成原理（89/100）、高等数学（93/100）、线性代数（97/100）、概率论与数理统计（91/100）、数值分析（93/100）}
+    \end{resumeList}
+\end{resumeList}
+
+\section{考研成绩}
+\noindent\textbf{报考院校：华南理工大学}  \quad \textbf{报考专业：计算机科学与技术（081200）}
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \setlength{\extrarowheight}{2pt}
+    \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        \multirow{2}{*}{\textbf{初试成绩}} & \textbf{政治} & \textbf{英语} & \textbf{数学} & \textbf{计算机学科基础} & \textbf{总分} \\
+        \cline{2-6}
+        & 69 & 60 & 84 & 99 & 312 \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+% 项目经历
+\section{项目经历}
+\begin{resumeList}
+    \resumeEntry{基于Spring Boot的订餐管理系统}{}{Spring Boot（Java后端）、MyBatis-Plus、Spring Security}{2023}
+    \begin{resumeList}
+        \resumeItem{采用Spring Boot构建系统，遵循MVC设计，提高开发效率和可维护性。}
+        \resumeItem{集成Spring Security和Kerberos实现企业级SSO认证，解决了传统电商平台用户信息（尤其是密码）明文存储的问题，显著提升了系统安全性和用户体验。}
+    \end{resumeList}
+    \resumeEntry{基于Django框架的旅游推荐系统}{}{Scrapy、Django、PyCharts}{2024}
+    \begin{resumeList}
+        \resumeItem{使用Scrapy + Asyncio + Aiohttp并发爬虫，数据采集速度提升40\%。}
+        \resumeItem{Django + PyCharts数据可视化，增强交互体验。}
+    \end{resumeList}
+    \resumeEntry{基于快速进位链的8位ALU设计与实现}{}{Quartus II、HDL、TD-CMA实验箱}{2023}
+\begin{resumeList}
+    \resumeItem{采用快速进位链技术优化加法器的进位传播问题，实现加法、减法、逻辑运算等功能。}
+    \resumeItem{使用Quartus II绘制电路图，编写HDL代码，并在TD-CMA实验箱上进行测试和性能验证。}
+\end{resumeList}
+    \resumeEntry{建筑可持续性评估研究}{HELIYON（IF: 3.4）}{第三作者，DOI：10.1016/j.heliyon.2024.e32151}{2024}
+    \begin{resumeList}
+        \resumeItem{利用PCA对47个指标聚类，验证7个二级指标分类合理性。}
+        \resumeItem{识别关键指标并优化指标体系，减少17\%的冗余数据。}
+    \end{resumeList}
+\end{resumeList}
+
+% 实习经历
+\section{实习经历}
+\begin{resumeList}
+    \resumeEntry{山大地纬软件股份有限公司}{济南，山东}{Java开发实习生}{2023.06 -- 2023.08}
+    \begin{resumeList}
+        \resumeItem{参与“智慧政务平台”核心模块开发，负责用户权限管理系统的设计与实现，提升系统安全性和用户体验。}
+        \resumeItem{使用Spring Boot、MyBatis、Vue.js开发3个微服务模块，修复25+系统Bug，代码合并通过率95\%。}
+        \resumeItem{优化政务数据处理模块，提高数据处理效率30\%，页面加载速度提升40\%。}
+        \resumeItem{编写API文档，参与代码评审，提出改进建议，获得团队认可。}
+        \resumeItem{独立开发ECharts数据可视化面板，成功集成至系统并获客户好评。}
+    \end{resumeList}
+\end{resumeList}
+
+% 获奖情况
+\section{获奖情况}
+\begin{resumeList}
+    \resumeEntry{全国大学生数学竞赛}{山东赛区}{二等奖}{2024.11}
+    \begin{resumeList}
+        \resumeItem{在5000+名参赛者中脱颖而出，获二等奖。}
+        \resumeItem{每周练习20+小时，深入研究微积分与线性代数。}
+    \end{resumeList}
+    \resumeEntry{院级二等奖学金}{齐鲁工业大学}{}{2021-2022}
+    \begin{resumeList}
+        \resumeItem{授予学术成绩前15\%学生，基于学业与课外贡献评定。}
+        \resumeItem{团队编程项目中负责核心功能开发与版本管理，答辩表现优异，获A类成绩（90+）。}
+    \end{resumeList}
+    \resumeEntry{C1 驾照}{}{}{}
+\end{resumeList}
+
+% 专业技能
+\section{专业技能}
+\begin{resumeList}
+    \resumeItem{熟练使用Linux、Git/GitHub，具备多人协作开发经验。}
+    \resumeItem{掌握JWT、Kerberos鉴权机制，理解DES等加密算法原理。}
+    \resumeItem{精通爬虫技术（Scrapy、BeautifulSoup、Selenium），掌握反爬策略（User-Agent伪装、IP代理池、验证码识别、请求频率控制）。}
+\end{resumeList}
 \end{document}
