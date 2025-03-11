@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt]{ctexart}
+\documentclass[a4paper,11pt]{article}
 \usepackage{latexsym, fullpage, titlesec, marvosym, enumitem, hyperref, fancyhdr, tabularx, fontawesome}
 \usepackage[usenames,dvipsnames]{color}
 \pagestyle{fancy}
@@ -14,7 +14,7 @@
 \setlength{\tabcolsep}{0in}
 \titleformat{\section}{\scshape\large\raggedright}{}{0em}{}[\titlerule]
 
-% 自定义环境和命令
+% Custom environment and commands
 \newenvironment{resumeList}{\begin{itemize}[leftmargin=*,label={}]}{\end{itemize}}
 \newcommand{\resumeItem}[1]{\item\small{#1}}
 \newcommand{\resumeEntry}[4]{
@@ -25,57 +25,57 @@
 }
 
 \begin{document}
-% 个人信息
+% Personal Information
 \begin{center}
-    {\Huge\bfseries 吕昭庭} \\ \vspace{3pt}
+    {\Huge\bfseries L\text{"u} Zhaoting} \\ \vspace{3pt}
     \small
-    \faMobile \hspace{.5pt} +86 138-0343-9355 $|$ \faAt \hspace{.5pt} \href{mailto:lvzting0717@163.com}{lvzting0717@163.com} $|$ \faMapMarker \hspace{.5pt} 山西太原 $|$ \faGithub \hspace{.5pt} \href{https://github.com/yourgithub}{github.com/yourgithub}
+    \faMobile \hspace{.5pt} +86 138-0343-9355 $|$ \faAt \hspace{.5pt} \href{mailto:lvzting0717@163.com}{lzting0717@163.com} $|$ \faMapMarker \hspace{.5pt} Taiyuan, Shanxi, China 
 \end{center}
 
-% 教育背景
-\section{教育背景}
+% Education
+\section{Education}
 \begin{resumeList}
-    \resumeEntry{齐鲁工业大学 (山东省科学院)}{中国，山东}{计算机科学与技术，学士}{2021.09 -- 2024.06}
+    \resumeEntry{Qilu University of Technology (Shandong Academy of Sciences)}{Shandong, China}{Bachelor of Computer Science and Technology}{Sep 2021 -- Jun 2024}
     \begin{resumeList}
-        \resumeItem{主要课程: 数据结构（88）、计算机组成原理（89）、Linux编程基础（88）、高等数学（85）、线性代数（97）、概率论与数理统计（91）、离散数学（85）、数值分析（93）、机器学习与模式识别（85）}
-        \resumeItem{CET6 (英语六级, 516) | 全国大学生数学竞赛（山东赛区二等奖） | 院级二等奖学金 | C1驾照}
+        \resumeItem{Key Courses: Data Structures (88), Computer Organization (89), Linux Programming Basics (88), Advanced Mathematics (85), Linear Algebra (97), Probability and Mathematical Statistics (91), Discrete Mathematics (85), Numerical Analysis (93), Machine Learning and Pattern Recognition (85)}
+        \resumeItem{CET6 (516) | National College Mathematics Competition (Shandong Division, Second Prize) | College Second-Class Scholarship | C1 Driver's License}
     \end{resumeList}
 \end{resumeList}
 
-% 项目经历
-\section{项目经历}
+% Projects
+\section{Projects}
 \begin{resumeList}
-    \resumeEntry{基于Spring Boot的订餐管理系统}{}{Spring Boot (Java后端), MyBatis-Plus, Spring Security}{}
+    \resumeEntry{Meal Ordering Management System Based on Spring Boot}{}{Spring Boot (Java Backend), MyBatis-Plus, Spring Security}{}
     \begin{resumeList}
-        \resumeItem{采用Spring Boot构建系统，遵循MVC设计，提高开发效率和可维护性。}
-        \resumeItem{集成Spring Security + Kerberos 实现企业级SSO认证，增强系统安全性。}
+        \resumeItem{Built the system using Spring Boot, following the MVC design pattern to improve development efficiency and maintainability.}
+        \resumeItem{Integrated Spring Security + Kerberos for enterprise-level SSO authentication, enhancing system security.}
     \end{resumeList}
-    \resumeEntry{8位ALU设计}{}{Quartus II, HDL, TD-CMA实验箱}{}
+    \resumeEntry{8-bit ALU Design}{}{Quartus II, HDL, TD-CMA Experimental Box}{}
     \begin{resumeList}
-        \resumeItem{基于快速进位链优化加法器，实现高效加减法及逻辑运算，提高计算速度。}
-        \resumeItem{使用Quartus II绘制电路图，编写HDL代码并在TD-CMA实验箱测试。}
+        \resumeItem{Optimized the adder with a fast carry chain, achieving efficient addition/subtraction and logical operations.}
+        \resumeItem{Designed circuit diagrams using Quartus II, wrote HDL code, and tested it on the TD-CMA experimental box.}
     \end{resumeList}
-    \resumeEntry{基于Django框架的旅游推荐系统}{}{Scrapy, Django, PyCharts}{}
+    \resumeEntry{Tourism Recommendation System Based on Django}{}{Scrapy, Django, PyCharts}{}
     \begin{resumeList}
-        \resumeItem{使用Scrapy + Asyncio + Aiohttp 并发爬虫，提高数据爬取效率。}
-        \resumeItem{Django + PyCharts 数据可视化，增强交互体验。}
+        \resumeItem{Implemented high-performance web scraping using Scrapy + Asyncio + Aiohttp concurrent crawler.}
+        \resumeItem{Developed a Django web application with PyCharts for interactive data visualization.}
     \end{resumeList}
-    \resumeEntry{建筑可持续性评估研究}{HELIYON (IF: 3.4)}{第三作者}{2024}
+    \resumeEntry{Research on Building Sustainability Assessment}{HELIYON (IF: 3.4)}{Third Author}{2024}
     \begin{resumeList}
-        \resumeItem{利用PCA对47个指标聚类，验证7个二级指标分类合理性。}
-        \resumeItem{识别关键指标并优化指标体系，减少17\%的冗余数据。}
+        \resumeItem{Applied PCA to cluster 47 indicators, validating the rationality of 7 secondary indicator classifications.}
+        \resumeItem{Identified key indicators and optimized the indicator system, reducing redundant data by 17\%.}
     \end{resumeList}
 \end{resumeList}
 
-% 专业素养
-\section{专业素养}
+% Professional Skills
+\section{Professional Skills}
 \begin{resumeList}
-    \resumeItem{熟练使用Git/GitHub，具备多人协作开发经验。}
-    \resumeItem{熟悉Linux操作，掌握Shell脚本编写。}
-    \resumeItem{掌握Java语法，熟悉JUC并发编程，理解锁机制及线程池原理。}
-    \resumeItem{熟悉Spring、SpringMVC、SpringBoot、MyBatis，具备Spring Cloud整合开发经验，掌握Spring Boot执行流程。}
-    \resumeItem{掌握JWT、Kerberos等用户鉴权机制，理解DES等典型对称、非对称加密算法。}
-    \resumeItem{熟悉MySQL，掌握索引优化、事务管理及分库分表策略。}
+    \resumeItem{Proficient in Git/GitHub and experienced in collaborative development.}
+    \resumeItem{Familiar with Linux operations and capable of writing Shell scripts.}
+    \resumeItem{Skilled in Java, familiar with JUC concurrent programming, lock mechanisms, and thread pool principles.}
+    \resumeItem{Experienced with Spring, SpringMVC, SpringBoot, and MyBatis, with knowledge of Spring Cloud integration and Spring Boot execution processes.}
+    \resumeItem{Knowledgeable in authentication mechanisms such as JWT and Kerberos, and fundamental concepts of symmetric/asymmetric encryption algorithms like DES.}
+    \resumeItem{Experienced in MySQL, proficient in index optimization, transaction management, and database partitioning strategies.}
 \end{resumeList}
 
 \end{document}
