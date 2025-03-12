@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper,10.5pt]{article}
 
 \usepackage[margin=0.6in]{geometry}
 \usepackage{latexsym,titlesec,marvosym,enumitem,hyperref,fancyhdr,tabularx,fontawesome,microtype,xcolor}
@@ -55,17 +55,19 @@
 {Spring Boot, MyBatis-Plus, Spring Security}{May 2022}
 \begin{resumeList}
     \resumeItem{Developed with Spring Boot and MVC, enhancing maintainability.}
-    \resumeItem{Integrated Spring Security and Kerberos for SSO authentication, addressing password security risks.}
+    \resumeItem{Integrated Spring Security for robust permission control and introduced Kerberos protocol for secure Single Sign-On (SSO), effectively mitigating password transmission risks. Unlike traditional commercial platforms with insufficient privacy safeguards, this comprehensive security strategy greatly enhanced user data protection, fostering higher user trust}
 \end{resumeList}
 
 \resumeEntry{Tourism Recommendation System}{}{Scrapy, Django, PyCharts}{Sep 2024}
 \begin{resumeList}
-    \resumeItem{Used Scrapy with Asyncio and Aiohttp for concurrent scraping, improving efficiency by 40\%.}
     \resumeItem{Implemented Django with PyCharts for data visualization and better user interaction.}
+    \resumeItem{Used Scrapy with Asyncio and Aiohttp for concurrent scraping, improving efficiency by 40\%.}
+    \resumeItem{With the improvement in scraping efficiency, I encountered substantial anti-scraping obstacles, including frequent IP restrictions and sophisticated crawler detection mechanisms. To address these challenges, I developed tailored anti-blocking strategies encompassing IP rotation, dynamic request intervals, and randomized User-Agent headers, effectively circumventing the implemented anti-scraping measures.}
 \end{resumeList}
 
-\resumeEntry{Building Sustainability Research}{HELIYON (IF: 3.4)}
-{Third Author, DOI: 10.1016/j.heliyon.2024.e32151}{Jun 2024}
+\resumeEntry{A sustainability-oriented approach for performance assessment of
+existing buildings and a case study}{}
+{HELIYON (IF: 3.4)， Third Author, DOI: 10.1016/j.heliyon.2024.e32151}{Jun 2024}
 \begin{resumeList}
     \resumeItem{Applied PCA to cluster 47 indicators, validating 7 secondary classifications.}
     \resumeItem{Optimized system to reduce redundant data by 17\%.}
@@ -75,26 +77,26 @@
 \resumeEntry{Dareway Software CO., LTD.}{Jinan, Shandong, China}
 {Java Backend Development Intern}{Jun 2023 -- Aug 2023}
 \begin{resumeList}
-    \resumeItem{Developed core modules for "Smart Government Affairs Platform," focusing on user permission management.}
-    \resumeItem{Used Spring Boot, MyBatis, and Vue.js in a microservices setup, fixing 25+ bugs with a 95\% merge rate.}
-    \resumeItem{Optimized data processing module, boosting efficiency by 30\%.}
-    \resumeItem{Created an ECharts dashboard integrated into the system for data visualization.}
+    \resumeItem{Participated in the implementation of business logic and database design for the order management module, liaising with the front-end and testing teams to ensure smooth rollout of features.}
+    \resumeItem{Encountered cache consistency issues and inadequate session expiration strategies during session management in concurrent scenarios, which led to disorganized user data; while designing and maintaining the role-permission relationship database structure for access control involving multiple roles and hierarchies, faced risks of redundant data and repeated authorizations.}
+    \resumeItem{Implemented session caching using Redis and optimized the session expiration strategy to reduce frequent database queries; employed distributed locks to resolve data conflicts from concurrent modifications, resulting in approximately a 20\% improvement in API response speed and a 30\% reduction in database read/write load.}
+    \resumeItem{Adopted a JWT (JSON Web Token)-based authentication mechanism and integrated Spring Security for fine-grained control over role permissions, thereby avoiding redundant authorization and permission duplication.}
 \end{resumeList}
+
 
 \section{HONORS}
 \renewcommand{\arraystretch}{1.3}
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
     Second-Class Scholarship, Qilu University of Technology & 2022 \\
-    C1 Driver's License & 2023 \\
     Second Prize, China Undergraduate Mathematical Contest (Shandong) & 2024 \\
 \end{tabular*}
 \renewcommand{\arraystretch}{1.0}
 
-\section{TECHNICAL SKILLS}
+\section{SKILL}
 \begin{resumeList}
-    \resumeItem{Proficient: Linux, Git/GitHub, collaborative development.}
-    \resumeItem{Experienced: JWT, Kerberos, encryption algorithms (DES).}
-    \resumeItem{Skilled: Web scraping (Scrapy, BeautifulSoup, Selenium); Anti-scraping (User-Agent spoofing, IP proxy pools, CAPTCHA recognition with Tesseract OCR, request throttling).}
+    \resumeItem{\textbf{Technical Skills:} Linux, Git/GitHub, collaborative development, JWT, Kerberos, typical encryption algorithms (DES, AES, RSA, MD5). Anti-scraping techniques including User-Agent spoofing, IP proxy pools, CAPTCHA recognition with Tesseract OCR, and request throttling.}
+    \resumeItem{\textbf{Soft Skills:} C1 Driver License, effective communication and collaboration skills, developed through teamwork in academic and professional settings.}
 \end{resumeList}
+
 
 \end{document}
