@@ -1,0 +1,97 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[margin=0.6in]{geometry}
+\usepackage{latexsym,titlesec,marvosym,enumitem,hyperref,fancyhdr,tabularx,fontawesome,microtype,xcolor}
+\hypersetup{colorlinks, urlcolor=blue}
+\urlstyle{same}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\flushbottom
+
+\renewcommand{\baselinestretch}{1.03}\selectfont
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0in}
+
+\setlist[itemize]{leftmargin=*, label=\textbullet{}, itemsep=2pt, topsep=3pt}
+
+\titleformat{\section}{\scshape\normalsize\raggedright}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+
+\newenvironment{resumeList}{\begin{itemize}[leftmargin=*, label=\textbullet{}, itemsep=2pt]}{\end{itemize}}
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+
+\newcommand{\resumeEntry}[4]{%
+  \textbf{#1} \hfill #2 \\
+  \small #3 \hfill #4
+  \vspace{-3pt}
+}
+
+\begin{document}
+\normalsize  
+
+\begin{center}
+    {\bfseries\huge Zhaoting Lv} \\[3pt]
+    \small
+    \faMobile\,+86 138-0343-9355 \quad $|$ \quad 
+    \faAt\,\href{mailto:lvzting0717@163.com}{lzting0717@163.com} \quad $|$ \quad 
+    \faMapMarker\,MeiLinWan, Wanbailin District, Taiyuan, Shanxi, China
+\end{center}
+
+\section{EDUCATION}
+\resumeEntry{QILU UNIVERSITY OF TECHNOLOGY}{Jinan, Shandong, China}
+{B.S. in Computer Science and Technology}{Sep 2021 -- Jun 2025}
+\begin{resumeList}
+    \resumeItem{GPA: 3.4/5.0 \quad CET6: 516} 
+    \resumeItem{Key Courses: Data Structures (88), Computer Organization (89), Advanced Math (93), Linear Algebra (97), Probability (91), Numerical Analysis (93)}
+\end{resumeList}
+
+\section{PROJECTS}
+\resumeEntry{Online Food Ordering System}{Database Course Design}
+{Spring Boot, MyBatis-Plus, Spring Security}{May 2022}
+\begin{resumeList}
+    \resumeItem{Developed with Spring Boot and MVC, enhancing maintainability.}
+    \resumeItem{Integrated Spring Security and Kerberos for SSO authentication, addressing password security risks.}
+\end{resumeList}
+
+\resumeEntry{Tourism Recommendation System}{}{Scrapy, Django, PyCharts}{Sep 2024}
+\begin{resumeList}
+    \resumeItem{Used Scrapy with Asyncio and Aiohttp for concurrent scraping, improving efficiency by 40\%.}
+    \resumeItem{Implemented Django with PyCharts for data visualization and better user interaction.}
+\end{resumeList}
+
+\resumeEntry{Building Sustainability Research}{HELIYON (IF: 3.4)}
+{Third Author, DOI: 10.1016/j.heliyon.2024.e32151}{Jun 2024}
+\begin{resumeList}
+    \resumeItem{Applied PCA to cluster 47 indicators, validating 7 secondary classifications.}
+    \resumeItem{Optimized system to reduce redundant data by 17\%.}
+\end{resumeList}
+
+\section{INTERNSHIP}
+\resumeEntry{Dareway Software CO., LTD.}{Jinan, Shandong, China}
+{Java Backend Development Intern}{Jun 2023 -- Aug 2023}
+\begin{resumeList}
+    \resumeItem{Developed core modules for "Smart Government Affairs Platform," focusing on user permission management.}
+    \resumeItem{Used Spring Boot, MyBatis, and Vue.js in a microservices setup, fixing 25+ bugs with a 95\% merge rate.}
+    \resumeItem{Optimized data processing module, boosting efficiency by 30\%.}
+    \resumeItem{Created an ECharts dashboard integrated into the system for data visualization.}
+\end{resumeList}
+
+\section{HONORS}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    Second-Class Scholarship, Qilu University of Technology & 2022 \\
+    C1 Driver's License & 2023 \\
+    Second Prize, China Undergraduate Mathematical Contest (Shandong) & 2024 \\
+\end{tabular*}
+\renewcommand{\arraystretch}{1.0}
+
+\section{TECHNICAL SKILLS}
+\begin{resumeList}
+    \resumeItem{Proficient: Linux, Git/GitHub, collaborative development.}
+    \resumeItem{Experienced: JWT, Kerberos, encryption algorithms (DES).}
+    \resumeItem{Skilled: Web scraping (Scrapy, BeautifulSoup, Selenium); Anti-scraping (User-Agent spoofing, IP proxy pools, CAPTCHA recognition with T
