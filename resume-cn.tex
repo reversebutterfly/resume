@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt]{ctexart}
+\documentclass[a4paper,10pt]{ctexart}
 \usepackage{latexsym, fullpage, titlesec, marvosym, enumitem, hyperref, fancyhdr, tabularx, fontawesome}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{tabularx}
@@ -11,14 +11,16 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-0.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\textheight}{1.2in}
 \urlstyle{same}
 \raggedbottom\raggedright
 \setlength{\tabcolsep}{0in}
 \titleformat{\section}{\scshape\large\raggedright}{}{0em}{}[\titlerule]
 % 自定义环境和命令
+
+
 \newenvironment{resumeList}{\begin{itemize}[leftmargin=*,label={}]}{\end{itemize}}
-\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeItem}[1]{\item \small{\textbullet\quad #1}}
 \newcommand{\resumeEntry}[4]{
   \item \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
@@ -30,33 +32,36 @@
 \begin{center}
     {\Huge\bfseries 吕昭庭} \\ \vspace{3pt}
     \small
-    \faMobile \hspace{.5pt} +86 138-0343-9355 $|$ \faAt \hspace{.5pt} \href{mailto:lvzting0717@163.com}{lzting0717@163.com} $|$ \faMapMarker \hspace{.5pt} 山西太原}
+    \faMobile \hspace{.5pt} +86 138-0343-9355 $|$ \faAt \hspace{.5pt} \href{mailto:lvzting0717@163.com}{lzting0717@163.com} $|$ \faMapMarker \hspace{.5pt} 山西太原
 \end{center}
-
+\vspace{-18pt}
 % 教育背景
 \section{教育背景}
 \begin{resumeList}
     \resumeEntry{齐鲁工业大学（山东省科学院）}{济南, 山东}{计算机科学与技术，学士}{2021.09 -- 2025.06}
     \begin{resumeList}
-        \resumeItem{GPA：3.4/5.0 \qquad CET6：516/710}
-        \resumeItem{主要课程：数据结构（88/100）、计算机组成原理（89/100）、高等数学（93/100）、线性代数（97/100）、概率论与数理统计（91/100）、数值分析（93/100）}
+        \resumeItem{GPA：3.4/5.0 \qquad CET6：516}
+        \resumeItem{主要课程：数据结构（88）、计算机组成原理（89）、高等数学（93）、线性代数（97）、概率论与数理统计（91）、数值分析（93）}
+        \resumeItem{院级二等奖学金、全国大学生数学竞赛山东赛区二等奖}
     \end{resumeList}
 \end{resumeList}
 
 \section{考研成绩}
-\noindent\textbf{报考院校：华南理工大学}  \quad \textbf{报考专业：计算机科学与技术（081200）}
+\noindent\textbf{报考院校：华南理工大学} \quad \textbf{报考专业：计算机科学与技术（081200）}
+\vspace{-3pt} % 减少文字和表格间的距离
 \begin{table}[h]
-    \centering
-    \renewcommand{\arraystretch}{1.3}
-    \setlength{\extrarowheight}{2pt}
-    \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
-        \hline
-        \multirow{2}{*}{\textbf{初试成绩}} & \textbf{政治} & \textbf{英语} & \textbf{数学} & \textbf{计算机学科基础} & \textbf{总分} \\
-        \cline{2-6}
-        & 69 & 60 & 84 & 99 & 312 \\
-        \hline
-    \end{tabularx}
+\setlength{\intextsep}{0pt} % 减少table环境的额外间距
+\centering
+\renewcommand{\arraystretch}{1.2} % 稍微减小行间距
+\setlength{\extrarowheight}{1pt} % 减小额外行高
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+\hline
+\multirow{2}{*}{\textbf{初试成绩}} & \textbf{政治} & \textbf{英语} & \textbf{数学} & \textbf{计算机学科基础} & \textbf{总分} \\ \cline{2-6}
+& 69 & 60 & 84 & 99 & 312 \\ \hline
+\end{tabularx}
 \end{table}
+\vspace{-10pt} % 减少表格和下一部分间的距离
+
 
 % 项目经历
 \section{项目经历}
@@ -64,21 +69,17 @@
     \resumeEntry{基于Spring Boot的订餐管理系统}{}{Spring Boot（Java后端）、MyBatis-Plus、Spring Security}{2023}
     \begin{resumeList}
         \resumeItem{采用Spring Boot构建系统，遵循MVC设计，提高开发效率和可维护性。}
-        \resumeItem{集成Spring Security和Kerberos实现企业级SSO认证，解决了传统电商平台用户信息（尤其是密码）明文存储的问题，显著提升了系统安全性和用户体验。}
+        \resumeItem{集成Spring Security和Kerberos，配置 KDC（密钥分发中心）和TGS（票据服务器），实现企业级SSO认证。}
     \end{resumeList}
     \resumeEntry{基于Django框架的旅游推荐系统}{}{Scrapy、Django、PyCharts}{2024}
     \begin{resumeList}
         \resumeItem{使用Scrapy + Asyncio + Aiohttp并发爬虫，数据采集速度提升40\%。}
+        \resumeItem{定制IP轮换、动态请求间隔和随机User-Agent头部的反封锁策略，有效规避了反爬措施。}
         \resumeItem{Django + PyCharts数据可视化，增强交互体验。}
     \end{resumeList}
-    \resumeEntry{基于快速进位链的8位ALU设计与实现}{}{Quartus II、HDL、TD-CMA实验箱}{2023}
-\begin{resumeList}
-    \resumeItem{采用快速进位链技术优化加法器的进位传播问题，实现加法、减法、逻辑运算等功能。}
-    \resumeItem{使用Quartus II绘制电路图，编写HDL代码，并在TD-CMA实验箱上进行测试和性能验证。}
-\end{resumeList}
     \resumeEntry{建筑可持续性评估研究}{HELIYON（IF: 3.4）}{第三作者，DOI：10.1016/j.heliyon.2024.e32151}{2024}
     \begin{resumeList}
-        \resumeItem{利用PCA对47个指标聚类，验证7个二级指标分类合理性。}
+        \resumeItem{利用PCA（主成分分析）对47个三级指标聚类，验证7个二级指标分类合理性。}
         \resumeItem{识别关键指标并优化指标体系，减少17\%的冗余数据。}
     \end{resumeList}
 \end{resumeList}
@@ -86,38 +87,17 @@
 % 实习经历
 \section{实习经历}
 \begin{resumeList}
-    \resumeEntry{山大地纬软件股份有限公司}{济南，山东}{Java开发实习生}{2023.06 -- 2023.08}
+    \resumeEntry{言信软件股份有限公司}{济南，山东}{Java开发实习生}{2023.06 -- 2023.08}
     \begin{resumeList}
-        \resumeItem{参与“智慧政务平台”核心模块开发，负责用户权限管理系统的设计与实现，提升系统安全性和用户体验。}
-        \resumeItem{使用Spring Boot、MyBatis、Vue.js开发3个微服务模块，修复25+系统Bug，代码合并通过率95\%。}
-        \resumeItem{优化政务数据处理模块，提高数据处理效率30\%，页面加载速度提升40\%。}
-        \resumeItem{编写API文档，参与代码评审，提出改进建议，获得团队认可。}
-        \resumeItem{独立开发ECharts数据可视化面板，成功集成至系统并获客户好评。}
+        \resumeItem{参与支付模块的业务逻辑与数据库设计，确保与前端和测试团队的无缝集成。}
+        \resumeItem{基于OAuth 2.0框架，使用短生命周期 JWT 令牌实现可靠会话管理，使用 TLS 对 HTTP 请求和响应进行加密。}
+        \resumeItem{参与代码评审，提出优化建议，在后端加入 HttpOnly Secure Cookie，与前端开发人员配合避免XSS前端安全漏洞。}
     \end{resumeList}
 \end{resumeList}
 
-% 获奖情况
-\section{获奖情况}
+\section{技能}
 \begin{resumeList}
-    \resumeEntry{全国大学生数学竞赛}{山东赛区}{二等奖}{2024.11}
-    \begin{resumeList}
-        \resumeItem{在5000+名参赛者中脱颖而出，获二等奖。}
-        \resumeItem{每周练习20+小时，深入研究微积分与线性代数。}
-    \end{resumeList}
-    \resumeEntry{院级奖学金}{齐鲁工业大学}{二等奖}{2021-2022}
-    \begin{resumeList}
-        \resumeItem{授予学业成绩前15\%学生}
-        \resumeItem{团队编程项目中负责核心功能开发与版本管理，答辩表现优异，获A类成绩（90+）。}
-    \end{resumeList}
-    \resumeEntry{C1 驾照}{}{}{}
-\end{resumeList}
-
-% 专业技能
-\section{专业技能}
-\begin{resumeList}
-    \resumeItem{熟练使用Linux、Git/GitHub，具备多人协作开发经验。}
-    \resumeItem{掌握JWT、Kerberos鉴权机制，理解DES等加密算法原理。}
-    \resumeItem{精通爬虫技术（Scrapy、BeautifulSoup、Selenium），掌握反爬策略（User-Agent伪装、IP代理池、验证码识别、请求频率控制）。}
-    \resumeItem{掌握 Latex等标签语言的基本语法，有使用Latex进行简历制作的经验}
+    \resumeItem{专业技能:} Linux, JWT, Kerberos,典型加密算法 (DES, AES, RSA, MD5等). 常见的爬虫技巧，包括User-Agent伪装、IP代理池管理、利用Tesseract OCR进行验证码识别及请求限流控制等。}
+    \resumeItem{其他技能:} C1 驾驶证；具备出色的沟通和协作能力，在多个团队项目积累了丰富的合作经验。}
 \end{resumeList}
 \end{document}
